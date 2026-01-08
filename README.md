@@ -1,4 +1,4 @@
-#Tenstorrent N300 MatMul Benchmark
+# Tenstorrent N300 MatMul Benchmark
 
 This repository contains a high-performance matrix multiplication (MatMul) benchmark tailored for the Tenstorrent N300 (Wormhole B0) accelerator.
 
