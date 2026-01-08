@@ -15,19 +15,19 @@ source /opt/venv/bin/activate
 
 # Install the ttnn library
 pip install ttnn
-2. Hardware Configuration
+# 2. Hardware Configuration
 The script targets the Wormhole B0 architecture. Ensure your environment variable is set:
 
 Bash
 
 export ARCH_NAME=wormhole_b0
 
-Run the Benchmark
+# Run the Benchmark
 Bash
 
 python3 test_n300.py
 
-Benchmark Logic
+# Benchmark Logic
 To provide the most accurate hardware latency figures, the script implements the following logic:
 
 Host-to-Device Transfer: Moves tensors from CPU memory to N300 SRAM.
@@ -36,7 +36,7 @@ Cold Start (Compilation): Executes a "warm-up" pass to compile the MatMul kernel
 
 Timed Execution: Uses time.perf_counter() and ttnn.synchronize() to measure pure hardware execution time without compilation overhead.
 
-Troubleshooting
+# Troubleshooting
 If the hardware is not detected (TT_FATAL), verify the PCIe link using the Tenstorrent System Management Interface:
 
 Bash
